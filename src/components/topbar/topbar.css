@@ -13,6 +13,29 @@
     margin-left: 20px;
     font-weight: bold;
     color: white;
+    cursor: pointer;
+}
+
+.searchbar {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.searchIcon {
+    font-size: 20px !important;
+    margin-left: 10px;
+}
+
+.searchInput {
+    border: none;
+    width: 70%;
+}
+.searchInput:focus {
+    outline: none;
 }
 
 .topLeft {
@@ -20,14 +43,53 @@
 }
 
 .topCenter {
-    flex: 3;
+    flex: 5;
 }
 
 .topRight {
-    flex: 3;
+    flex: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+.topLink {
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.topIcons {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.topIconItems {
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.topIconBadge {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+
 }
 
 .topImg {
     width: 32px;
     height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
 }
