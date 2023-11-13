@@ -1,4 +1,56 @@
 .sidebar {
     flex: 3;
     height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+
+.sideWrapper {
+    padding: 20px;
+}
+
+.sideList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sideListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sideIcon {
+    margin-right: 15px;
+}
+
+.sideButton {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.sideFriendImg {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.sideHr {
+    margin: 20px 0;
+}
+
+.sideFriendList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sideFriend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
