@@ -10,6 +10,12 @@
     padding: 10px;
 }
 
+.topRight {
+    display: flex;
+    justify-content: end;
+    color: black;
+}
+
 .top {
     display: flex;
     align-items: center;

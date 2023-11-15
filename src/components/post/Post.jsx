@@ -1,5 +1,5 @@
 import React from 'react'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
+import { MoreVert } from '@mui/icons-material'
 import './post.css'
 
 const Post = () => {
@@ -13,7 +13,7 @@ const Post = () => {
             <span className="date">10 min ago</span>
           </div>
           <div className="topRight">
-          <MoreVertIcon/>
+          <MoreVert/>
         </div>
         </div>
         <div className="center">
