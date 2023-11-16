@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     top: 0;
+    z-index: 999;
     position: sticky;
 }
 
@@ -46,17 +47,20 @@
     flex: 5;
 }
 
+
 .topRight {
     flex: 4;
     display: flex;
     color: white;
     align-items: center;
+    margin-right: 20px;
     justify-content: space-around;
 }
 .topLink {
     margin-right: 10px;
     font-size: 14px;
     cursor: pointer;
+    color: white;
 }
 .topIcons {
     display: flex;
@@ -68,6 +72,7 @@
     margin-right: 15px;
     cursor: pointer;
     position: relative;
+    color: white;
 }
 
 .topIconBadge {
