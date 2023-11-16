@@ -1,11 +1,11 @@
-import Profile from "./pages/profile/Profile";
+import Register from "./pages/register/Register";
 import './App.css'
 
 function App() {
 
   return (
     <div>
-      <Profile />
+      <Register />
     </div>
   )    
 }
