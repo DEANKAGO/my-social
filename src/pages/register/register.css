@@ -51,7 +51,7 @@
 }
   
 .loginInput{
-    height: 50px;
+    height: 35px;
     border-radius: 10px;
     border: 1px solid gray;
     font-size: 18px;
@@ -63,7 +63,7 @@
 }
   
 .loginButton{
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     border: none;
     background-color: #1775ee;
@@ -81,7 +81,7 @@
 .loginRegisterButton{
     width: 60%;
     align-self: center;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     border: none;
     background-color: #42b72a;
