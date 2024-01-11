@@ -12,32 +12,12 @@ import {
 function App() {
 
   return (
-    // <div>
-    //   < Home />
-    // </div>
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/" component={Home}>
-    //       <Home />
-    //     </Route>
-    //     <Route path="/login">
-    //       <Login />
-    //     </Route>
-    //     <Route path="/register">
-    //       <Register />
-    //     </Route>
-    //     <Route path="/profile/:username">
-    //       <Profile />
-    //     </Route>
-    //   </Switch>
-    // </Router>
-
     <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:username" element={<Profile />} />
 
         </Routes>
     </Router>
