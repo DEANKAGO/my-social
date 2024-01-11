@@ -26,15 +26,15 @@ const Share = () => {
                     </div>
                     <div className="option">
                         <Label htmlColor='blue' className='shareIcon'/>
-                        <span className="optionText">Photo or Video</span>
+                        <span className="optionText">Bookmark</span>
                     </div>
                     <div className="option">
                         <LocationOn htmlColor='green' className='shareIcon'/>
-                        <span className="optionText">Photo or Video</span>
+                        <span className="optionText">Location</span>
                     </div>
                     <div className="option">
                         <InsertEmoticon htmlColor='goldenrod' className='shareIcon'/>
-                        <span className="optionText">Photo or Video</span>
+                        <span className="optionText">Reaction</span>
                     </div>
                 </div>
                 <button className='btn'>Share</button>
