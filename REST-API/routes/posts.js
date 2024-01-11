@@ -77,49 +77,49 @@ router.get('/:id', async (req, res) => {
 
 // get timeline posts
 
-// router.get('/timeline/all', async (req, res) => {
+router.get("/timeline/:userId", async (req, res) => {
+    try {
+      const currentUser = await User.findById(req.params.userId);
+      const userPosts = await Post.find({ userId: currentUser._id });
+      const friendPosts = await Promise.all(
+        currentUser.followings.map((friendId) => {
+          return Post.find({ userId: friendId });
+        })
+      );
+      res.status(200).json(userPosts.concat(...friendPosts));
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+// GET timeline posts
+// router.get('/timeline/:userId', async (req, res) => {
 //     try {
-//         const currentUser = await User.findById(req.body.userId);
-//         const userPosts = await Post.find({ userId: currentUser._id});
+//         const userId = req.query.userId; // Use query parameters
+
+//         // Check if userId is provided
+//         if (!userId) {
+//             return res.status(400).json({ error: 'userId is required' });
+//         }
+
+//         const currentUser = await User.findById(params.userId);
+        
+//         if (!currentUser) {
+//             return res.status(404).json({ error: 'User not found' });
+//         }
+
+//         const userPosts = await Post.find({ userId: currentUser._id });
 //         const friendPosts = await Promise.all(
 //             currentUser.followings.map((friendId) => {
 //                 return Post.find({ userId: friendId });
 //             })
 //         );
-//         res.json(userPosts.concat(...friendPosts))
+
+//         res.status(200).json(userPosts.concat(...friendPosts));
 //     } catch (err) {
-//         res.status(500).json(err);
+//         res.status(500).json({ error: err.message });
 //     }
 // });
-
-// GET timeline posts
-router.get('/timeline/:userId', async (req, res) => {
-    try {
-        const userId = req.query.userId; // Use query parameters
-
-        // Check if userId is provided
-        if (!userId) {
-            return res.status(400).json({ error: 'userId is required' });
-        }
-
-        const currentUser = await User.findById(req.params.userId);
-        
-        if (!currentUser) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-
-        const userPosts = await Post.find({ userId: currentUser._id });
-        const friendPosts = await Promise.all(
-            currentUser.followings.map((friendId) => {
-                return Post.find({ userId: friendId });
-            })
-        );
-
-        res.status(200).json(userPosts.concat(...friendPosts));
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
-});
 
 
 
