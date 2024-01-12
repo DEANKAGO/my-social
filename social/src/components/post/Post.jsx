@@ -43,10 +43,21 @@ const Post = ({post}) => {
       <div className="postWrapper">
         <div className="top">
           <div className="topLeft">
-            <img className='postProfileImg' src={Users.filter((u) => u.id === post.userId)[0].profilePicture} alt="" />
+            <Link to={`/profile/${user.username}`}>
+              <img 
+                className='postProfileImg' 
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + "person/noAvatar.png"
+                  } 
+                  alt=""
+                  />
+            </Link>
             <span className='username'>
-              {Users.filter((u) => u.id === post.userId)[0].username}</span>
-            <span className="date">{post.date}</span>
+              {user.username}
+            </span>
+            <span className="date">{format(post.createdAt)}</span>
           </div>
           <div className="topRight">
           <MoreVert/>
@@ -54,13 +65,23 @@ const Post = ({post}) => {
         </div>
         <div className="center">
           <span className="text">{post?.desc}</span>
-          <img src={post.photo} alt="" className="postImg" />
+          <img src={PF + post.img } alt="" className="postImg" />
         </div>
         <div className="bottom">
           <div className="bottomLeft">
-            <img src="/assets/like.png" alt="" className="likeIcon" onClick={likeHandler} />
-            <img src="/assets/heart.jpeg" alt="" className="likeIcon" onClick={likeHandler} />
-            <span className="likeCounter">{like}</span>
+            <img 
+              src={`${PF}like.png`} 
+              className="likeIcon" 
+              onClick={likeHandler} 
+              alt=""
+            />
+            <img 
+              src={`${PF}heart.png`} 
+              alt="" 
+              className="likeIcon" 
+              onClick={likeHandler}  
+            />
+            <span className="likeCounter">{like} people like it </span>
           </div>
           <div className="bottomRight">
             <span className="commentText">{post.comment} Comments</span>
