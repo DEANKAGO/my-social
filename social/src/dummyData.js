@@ -1,32 +1,32 @@
 export const Users = [
     {
       id:1,
-      profilePicture: "assets/dd1.avif",
+      profilePicture: "dd1.avif",
       username: "Kago Muchai",
     },
     {
       id:2,
-      profilePicture: "assets/dd2.avif",
+      profilePicture: "dd2.avif",
       username: "John Cena",
     },
     {
       id:3,
-      profilePicture: "assets/dd3.jpg",
+      profilePicture: "dd3.jpg",
       username: "Michelle Wanjiru",
     },
     {
       id:4,
-      profilePicture: "assets/dd4.webp",
+      profilePicture: "dd4.webp",
       username: "Dean Muchai",
     },
     {
       id:5,
-      profilePicture: "assets/dd5.jpg",
+      profilePicture: "dd5.jpg",
       username: "Martin Martin",
     },
     {
       id:6,
-      profilePicture: "assets/dd6.avif",
+      profilePicture: "dd6.avif",
       username: "wendy Wendy",
     }
 ];
@@ -35,7 +35,7 @@ export const Posts = [
     {
         id: 1,
         desc: "Love For All, Hatred For None.",
-        photo: "assets/dd1.avif",
+        photo: "dd1.avif",
         date: "5 mins ago",
         userId: 1,
         like: 32,
@@ -44,7 +44,7 @@ export const Posts = [
     {
         
         id: 2,
-        photo: "assets/dd2.avif",
+        photo: "dd2.avif",
         date: "15 mins ago",
         userId: 2,
         like: 2,
@@ -53,7 +53,7 @@ export const Posts = [
       {
         id: 3,
         desc: "Every moment is a fresh beginning.",
-        photo: "assets/dd3.jpg",
+        photo: "dd3.jpg",
         date: "1 hour ago",
         userId: 3,
         like: 61,
