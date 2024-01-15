@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -22,6 +23,7 @@ async function connect() {
 connect();
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));
@@ -31,7 +33,8 @@ app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
 
 
+const PORT = process.env.PORT || 8800;
 
-app.listen(8800, () => {
+app.listen(PORT, () => {
     console.log('backend is running $$');
 })

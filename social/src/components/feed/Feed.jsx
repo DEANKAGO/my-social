@@ -6,7 +6,7 @@ import axios from "axios";
 import "./feed.css";
 // import { AuthContext } from "../../context/AuthContext";
 
-const Feed = ({username}) => {
+const Feed = ({username, user}) => {
   const [posts, setPosts] = useState([]);
   // const { username } = useContext(AuthContext);
 

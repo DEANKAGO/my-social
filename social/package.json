@@ -29,5 +29,5 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.5"
   },
-  "proxy": "https://localhost:8800/api"
+  "proxy": "http://127.0.0.1:8800"
 }

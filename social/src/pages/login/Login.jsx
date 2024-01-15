@@ -2,6 +2,8 @@ import React from 'react';
 import { useRef, useContext } from "react";
 import './login.css'
 import { AuthContext } from '../../context/AuthContext';
+import { loginCall } from "../../apiCalls.jsx"; 
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Login = () => {
 
@@ -44,10 +46,20 @@ const Login = () => {
               className="loginInput" 
               ref={password}
             />
-            <button className="loginButton">Log In</button>
+            <button className="loginButton" type="submit" disabled={isFetching}>
+              {isFetching ? (
+                < CircularProgress  />
+              ) : (
+                "Log In"
+              )}
+            </button>
             <span className="loginForgot">Forgot Password?</span>
             <button className="loginRegisterButton">
-              Create a New Account
+              {isFetching ? (
+                <CircularProgress  />
+              ) : (
+                "Create a New Account"
+              )}
             </button>
           </form>
         </div>
