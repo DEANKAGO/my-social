@@ -9,12 +9,13 @@ const Register = () => {
   const email = useRef();
   const password = useRef();
   const passwordAgain = useRef();
-  const history = useNavigate();
+  const navigateTo = useNavigate();
 
   const handleClick = async (e) => {
     e.preventDefault();
     if (passwordAgain.current.value !== password.current.value) {
-      passwordAgain.current.value.setCustomValidity( "Passwords don't match!");
+      // Use setCustomValidity on the input element
+      passwordAgain.current.setCustomValidity( "Passwords don't match!");
     } else {
       const user = {
         username: username.current.value,
@@ -23,7 +24,7 @@ const Register = () => {
       };
       try {
         await axios.post("http://127.0.0.1:8800/api/auth/register", user);
-        history.push("login");
+        navigateTo("login");
       } catch (err) {
         console.log(err);
       }
