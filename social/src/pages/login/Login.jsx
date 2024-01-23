@@ -34,6 +34,9 @@ const Login = () => {
             <input 
               placeholder="Email" 
               type="email" 
+              id='email'
+              name='email' 
+              autoComplete='email'
               className="loginInput" 
               required
               ref={email}
@@ -42,6 +45,9 @@ const Login = () => {
               placeholder="Password" 
               type="password" 
               minLength="6"
+              id='password'
+              name='password'
+              autoComplete='current-password'
               required
               className="loginInput" 
               ref={password}

@@ -6,6 +6,8 @@ import Online from '../online/Online'
 
 const Rightbar = ({profile}) => {
 
+  const PF = import.meta.env.VITE_APP_PUBLIC_FOLDER;
+
   const HomeRightbar = () => {
     return (
       <>
@@ -48,7 +50,7 @@ const Rightbar = ({profile}) => {
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img
-              src="assets/social-profile.jpg"
+              src={`${PF}social-profile.jpg`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -56,7 +58,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/social-sidebar.jpg"
+              src={`${PF}social-sidebar.jpg`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -64,7 +66,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/dd6.avif"
+              src={`${PF}dd6.avif`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -72,7 +74,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/dd4.webp"
+              src={`${PF}dd4.webp`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -80,7 +82,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/dd2.avif"
+              src={`${PF}dd2.avif`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -88,7 +90,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/dd3.jpg"
+              src={`${PF}dd3.jpg`}
               alt=""
               className="rightbarFollowingImg"
             />
@@ -96,7 +98,7 @@ const Rightbar = ({profile}) => {
           </div>
           <div className="rightbarFollowing">
             <img
-              src="assets/dd5.jpg"
+              src={`${PF}dd5.jpg`}
               alt=""
               className="rightbarFollowingImg"
             />

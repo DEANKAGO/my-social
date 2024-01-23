@@ -2,9 +2,15 @@ import React from 'react'
 import { Search, Person, Chat, Notifications }  from '@mui/icons-material';
 import './topbar.css'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import {  AuthContext } from '../../context/AuthContext';
+import NoAvatar from '../../assets/noAvatar.png';
 
 const Topbar = () => {
-  return (
+
+    const { user } = useContext(AuthContext);
+    const PF = process.env.VITE_APP_PUBLIC_FOLDER;
+    return (
     <div className='topContainer'>
         <div className='topLeft'>
             <Link to="/" style={{textDecoration:"none"}}>
@@ -35,10 +41,16 @@ const Topbar = () => {
                     <span className="topIconBadge">5</span>
                 </div>
             </div>
-            <img src="/assets/social-profile.jpg" alt="" className="topImg" />
+            <Link to={`/profile/${user.username}`}>
+                <img 
+                    src={user.profilePicture ? user.profilePicture : NoAvatar}
+                    alt="" 
+                    className="topImg"                         
+                />
+            </Link>
         </div>
     </div>
-  )
+    )
 }
 
 export default Topbar

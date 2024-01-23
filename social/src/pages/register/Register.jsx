@@ -42,9 +42,9 @@ const Register = () => {
         </div>
         <div className="loginRight">
           <form className="loginBox" onSubmit={handleClick}>
-            <input placeholder="Username" className="loginInput" ref={username} required/>
-            <input placeholder="Email" className="loginInput" ref={email} type="email" required/>
-            <input placeholder="Password" className="loginInput" type='password' ref={password} minLength="6" required/>
+            <input placeholder="Username" id='username' name='username' autoComplete='username' className="loginInput" ref={username} required/>
+            <input placeholder="Email" id='email' name='email' autoComplete='email' className="loginInput" ref={email} type="email" required/>
+            <input placeholder="Password" id='password' name='password' autoComplete='current-password' className="loginInput" type='password' ref={password} minLength="6" required/>
             <input placeholder="Password Again" className="loginInput" ref={passwordAgain} type="password" required />
             <button className="loginButton" type="submit">Sign Up</button>
             <button className="loginRegisterButton">
