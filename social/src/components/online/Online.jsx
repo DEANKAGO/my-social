@@ -1,5 +1,6 @@
 import React from 'react'
 import './online.css'
+import NoAvatar from '../../assets/noAvatar.png';
 
 const Online = ({user}) => {
 
@@ -8,7 +9,10 @@ const Online = ({user}) => {
   return (
     <li className="friend">
             <div className="profileImgContainer">
-              <img src={PF + user.profilePicture} alt="" className="profileImg" />
+              <img 
+                src={user.profilePicture || NoAvatar} 
+                alt="" className="profileImg" 
+              />
               <span className="online"></span>
             </div>
             <span className="username">{user.username}</span>

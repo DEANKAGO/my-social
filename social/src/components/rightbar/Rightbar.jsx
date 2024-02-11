@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./rightbar.css"
 import { Users } from '../../dummyData'
 import Online from '../online/Online'
+import {  AuthContext } from '../../context/AuthContext';
+import NoAvatar from '../../assets/noAvatar.png';
 
 
 const Rightbar = ({profile}) => {
-
+  
+  const { user } = useContext(AuthContext)
   const PF = import.meta.env.VITE_APP_PUBLIC_FOLDER;
 
   const HomeRightbar = () => {
@@ -50,7 +53,7 @@ const Rightbar = ({profile}) => {
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
             <img
-              src={`${PF}social-profile.jpg`}
+              src={user.profilePicture ? user.profilePicture : NoAvatar}
               alt=""
               className="rightbarFollowingImg"
             />

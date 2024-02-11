@@ -43,16 +43,25 @@ router.delete('/:id', async (req, res) => {
 
 // get user
 router.get('/', async (req, res) => {
-    const userId = req.query.userId;
-    const username = req.query.username;
+    const { userId, username } = req.query;
     try {
-        const user = userId 
-            ? await User.findById(userId)
-            : await User.findOne({username: username});
+        let user;
+        if (userId) {
+            user = await User.findById(userId);
+        } else if (username) {
+            user = await User.findOne({username});
+        } else {
+            return res.status(400).json({message: 'Please provide either userId or username'});
+        }
+
+        if (!user) {
+            return res.status(404).json({message: 'User not found'});
+        }
+    
         const { password, updatedAt, ...other } = user._doc;
         res.status(200).json(other);
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json({message: 'Internal Server Error'});
     }
 });
 // follow user

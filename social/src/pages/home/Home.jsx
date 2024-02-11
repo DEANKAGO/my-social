@@ -17,9 +17,9 @@ const Home = () => {
       <div className='homeContainer'>
         <Sidebar/>
         <Feed user={user} username={user?.username} />
-        <Rightbar/>
+        <Rightbar />
       </div>
-    </>
+    </> 
   )
 }
 

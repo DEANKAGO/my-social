@@ -43,7 +43,7 @@ const Topbar = () => {
             </div>
             <Link to={`/profile/${user.username}`}>
                 <img 
-                    src={user.profilePicture ? user.profilePicture : NoAvatar}
+                    src={user.profilePicture || NoAvatar}
                     alt="" 
                     className="topImg"                         
                 />

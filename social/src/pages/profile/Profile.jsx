@@ -7,6 +7,8 @@ import './profile.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from "axios";
+import NoAvatar from '../../assets/noAvatar.png';
+import NoCover from '../../assets/noCover.png';
 
 const Profile = () => {
   const [user, setUser] = useState([]);
@@ -29,20 +31,12 @@ const Profile = () => {
             <div className="profileRightTop">
               <div className="profileCover">
                 <img 
-                  src={
-                    user.coverPicture
-                      ? PF + user.coverPicture
-                      : PF + "noCover.png"
-                  } 
+                  src={user.coverPicture || NoCover}
                   alt="" 
                   className="profileCoverImg" 
                 />
                 <img 
-                  src={
-                    user.profilePicture
-                      ? PF + user.profilePicture
-                      :PF + "noAvatar.png"
-                  } 
+                  src={user.profilePicture || NoAvatar}
                   alt="" 
                   className="profileUserImg" 
                 />
